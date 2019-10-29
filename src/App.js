@@ -5,7 +5,7 @@ import Agora from './Agora'
 function App() {
   return (
     <div>
-      {/* <Agora /> */}
+      <Agora />
     </div>
   )
 }

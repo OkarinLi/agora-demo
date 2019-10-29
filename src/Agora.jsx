@@ -16,7 +16,6 @@ class Agora extends React.Component {
   }
 
   componentWillMount() {
-
     this.initAgora()
   }
 
@@ -45,14 +44,14 @@ class Agora extends React.Component {
     }
     this.client = AgoraRTC.createClient({ mode: 'live', codec: 'h264' })
     AgoraRTS.init(AgoraRTC, {
-      wasmDecoderPath: './AgoraRTS.wasm',
-      asmDecoderPath: './AgoraRTS.asm'
+      wasmDecoderPath: 'http://gcdncs.101.com/v0.1/static/nd_robot_steam_web_cs/AgoraRTS.wasm',
+      asmDecoderPath: 'http://gcdncs.101.com/v0.1/static/nd_robot_steam_web_cs/AgoraRTS.asm'
     }).catch(e => {
       if (e === 'LOAD_DECODER_FAILED') {
         console.log('加载解码器失败！')
       }
     })
-    AgoraRTS.proxy(this.client)
+    // AgoraRTS.proxy(this.client)
     this.client.init(
       '00640641460a183420abdf0556c3e6629e8IADbjHwM61dzQhmoyMPTDjGrt+x0W9B7+UTTJgGRr0Z2RuLcsooAAAAAEAALjPoMOAm5XQEAAQA3Cbld',
       () => {
