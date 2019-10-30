@@ -1,6 +1,6 @@
 import React from 'react'
 // import AgoraRTC from './AgoraRTC'
-import AgoraRTC from 'agora-rtc-sdk'
+import AgoraRTC from './AgoraRTC'
 import AgoraRTS from './AgoraRTS'
 
 
@@ -51,12 +51,12 @@ class Agora extends React.Component {
         console.log('加载解码器失败！')
       }
     })
-    // AgoraRTS.proxy(this.client)
+    AgoraRTS.proxy(this.client)
     this.client.init(
-      token,
+      '00640641460a183420abdf0556c3e6629e8IABBHSHXfuk1Rkwwcb6XdpH2d/lkLW4JZ0dA/xsXBMD3q1iNuxMAAAAAEAA9K1pL03O6XQEAAQDTc7pd',
       () => {
         this.subscribeStreamEvents()
-        this.client.join(null, channel, null, uid => {
+        this.client.join(null, 'test2', null, uid => {
           console.log('uid', uid)
         })
       }
