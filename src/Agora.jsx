@@ -53,10 +53,10 @@ class Agora extends React.Component {
     })
     AgoraRTS.proxy(this.client)
     this.client.init(
-      '00640641460a183420abdf0556c3e6629e8IABBHSHXfuk1Rkwwcb6XdpH2d/lkLW4JZ0dA/xsXBMD3q1iNuxMAAAAAEAA9K1pL03O6XQEAAQDTc7pd',
+      '00640641460a183420abdf0556c3e6629e8IACKG+mIsW6IZ7zfm1cq2MF4SiDxDlzvnrKAjsXoGxjvWQx+f9gAAAAAEAARF0XbFiO8XQEAAQAXI7xd',
       () => {
         this.subscribeStreamEvents()
-        this.client.join(null, 'test2', null, uid => {
+        this.client.join(null, 'test', null, uid => {
           console.log('uid', uid)
         })
       }
